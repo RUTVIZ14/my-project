@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function showPasswordAlert() {
+                alert("Create a strong password with at least 8 characters");
+            }
+
+            function showSuccessAlert() {
+                alert("Account Successfully Created");
+                window.location.href = "login.html"; 
+            }
+
+            function handleSubmit(event) {
+                event.preventDefault();
+                showSuccessAlert();
+            }
+
+            
+            $('#password').on('mouseover', function() {
+                showPasswordAlert();
+            });
+
+            
+            $('form').on('submit', function(event) {
+                handleSubmit(event);
+            });
+        });
+        $(document).ready(function() {
+    $('#number').on('keypress', function(event) {
+      var keyCode = event.which;
+      if (keyCode < 48 || keyCode > 57) {
+        event.preventDefault();
+      }
+    });
+  });
+    </script>
+</head>
+<body>
+  <div id="img">
+     
+    <header>
+      <h1>SIGNUP!</h1>
+      <h3>Welcome To WineMart</h3>
+    </header>
+  
+    <form action="login.html" method="post" onsubmit="handleSubmit(event)">
+  
+      
+  
+     <p><b>NAME:</b><input type="text" name="NAME" id="NAME" placeholder="Enter Your Full name" required></p>
+     <p><b>UserId:</b><input type="text" class="id" name="UserId" id="UserId" placeholder="Enter Unique id" required></p>
+     <p><b>EMAIL:</b><input type="email" name="EMAIL" id="EMAIL" placeholder="Enter your email" required></p>
+     <p><b>Number:</b><input type="text" name="number" id="number" placeholder="Enter Your Number" required></p>
+     <p>Password: <input type="password" name="password" id="password" placeholder="enter your password" onmouseover="showPasswordAlert()" required></p>
+     <p><b>Upload ID card:</b> <input type="file" value="ID Photo"></p>
+     <p>
+      <fieldset >
+        <legend>CHOOSE YOUR GENDER</legend>
+     <p>
+       Male <input type="radio" name="gender" id="Male"  required>  
+       Female <input type="radio" name="gender" id="Female" required>
+       Other <input type="radio" name="gender" id="Other" required>
+     </p>
+     </fieldset>
+    </p>
+    <p><b>DOB :</b><input type="date" name="DOB" id="DOB" required></p>
+     <p> ADDRESS: <textarea name="Address" class="area" id="Address" cols="30" rows="10"></textarea></p>
+     <p>PINCODE: <input type="number" class="num" name="PINCODE" id="PINCODE"></p>
+     <div ><input type="submit" value="SIGNUP"> </div>
+  
+    </form>
+      
+  </div>
+</body>
+</html>
+
+
+

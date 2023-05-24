@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN||SIGNUP</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+        <div class="bigimg">
+            <header>
+                <h1>WINE MART</h1> 
+                <h3>Log-in/Sign-up!</h3>
+            </header>
+
+            <main>
+                <h2>LOGIN</h2>
+                <form id="loginForm" action="home.html"></form>
+                <p>UserId/Number: <input type="text" name="login" id="login_id" placeholder="Email/Phone Number"></p>
+                <p class="pass">Password: <input type="password" name="password" id="password" placeholder="Enter your password"></p>
+                <div class="loginbuttton" align="center"><input type="submit" value="LOGIN"></div>
+            </form>
+            <div class="signupbutton" align="center"><button id="signupButton">SIGNUP</button></div>
+
+            </main>  
+
+        
+        
+        </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            $('#login_id').mousemove(function() {
+                showAlert('Enter Your UserID');
+            });
+
+            
+
+            
+            $('#signupButton').click(function() {
+                
+                window.location.href = 'sign_up.html';
+            });
+        });
+
+        function showAlert(message) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>

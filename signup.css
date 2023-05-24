@@ -1,0 +1,102 @@
+
+#img{
+    margin-left: 10%;
+    background: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    height: 65em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 15px 15px 10px;
+    
+
+    
+}
+header{
+    border-top: 3px solid black;
+   border-bottom: 3px solid black;
+   border-radius: 10px;
+   color: aliceblue;
+  margin-top: -5px;
+  padding: 6px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  
+
+}
+
+
+input[type="text"],input[type="email"],input[type="number"],input[type="password"],input[type="date"]
+select,textarea,input[type="date"]{
+    
+    padding: 12px;
+    border: 3px solid grey;
+    width: 30%;
+    
+}
+
+fieldset{
+    padding: 12px;
+    border: 5px solid black;
+    
+    
+}
+p,legend{
+     font-weight: bold;
+     filter: opacity(500px);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     
+}
+
+h1,h3{
+    filter: brightness(300px);
+    text-shadow: 4px 3px 5px black ;
+}
+
+
+input[type="submit"]{
+    background-color: goldenrod;
+    color: aliceblue;
+    padding: 12px 20px;
+    border: 3px solid gray;
+    width: 30%;
+    margin-left: 135px;
+    margin-top: 50px;
+   
+   
+}
+body{
+    background-image: url(c.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+input[type="text"]{
+    margin-left: 60px;
+}
+input[type="text"].id{
+    margin-left: 57px;
+}
+
+input[type="email"]{
+    margin-left: 55px;
+}
+#number{
+    margin-left: 45px;
+}
+input[type="password"]{
+    margin-left: 30px;
+}
+input[type="date"]{
+    margin-left: 70px;
+}
+.area{
+    margin-left: 25px;
+}
+input[type="number"].num{
+    margin-left: 28px;
+}
+

@@ -1,0 +1,241 @@
+h1{  
+    font-size: 40px;
+    color: rgb(222, 234, 49) ;
+}
+header{
+    background-image: url(w.jpg); 
+    padding: 15px 30px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid black;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 15px 15px 10px;
+}
+div.bigimg{
+    background-image:url(c2.jpg);
+    width: auto;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 15px 15px 10px;
+}
+li#cart{
+    margin-left: 88%;
+}
+li#logo{
+    margin-left: 70%;
+}
+li.home{
+   margin-left: 2px;
+}
+a{
+    color: antiquewhite; 
+}
+nav a {font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+    background-color: #333;
+}
+nav {
+    background-color: #333;
+    overflow: hidden;
+
+}
+nav ul{
+     margin: 0;
+     padding: 0;
+    list-style: none;  
+    white-space: nowrap;  
+}
+nav .mainmenu >li{
+    display: inline-block;
+    text-align: center;
+}
+nav a{
+    margin: 20;
+    text-align: left;
+    padding: 12px 15px 12px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+nav li:hover >a{
+    background: rgb(193, 218, 8);
+    cursor: pointer;
+}
+
+
+body{
+    background-color: black;
+}
+.search-bar,input[type="text"]{
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    border-radius: 50px;
+    padding: 7px 15px;
+}
+form.search-bar{
+    margin-left: 20%;
+    margin-top: -47px;
+}
+.categories-container {
+    font-family: "Roboto", sans-serif;
+    max-width: 900px;
+   padding: 8px 16px 16px 16px  }
+  .categories-container h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: #1b0101;
+    margin: 16px 0;
+    font-size: 25px;
+  }
+    .categories-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px;
+  }
+    .categories-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }  
+ .categories-list .single-category {
+    height: 350px;
+    width: 245px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  } 
+  .categories-list .single-category:hover .category-title {
+    opacity: 1;
+    transform: translateY(0);}
+  .categories-list .category-title {
+    font-weight: 300;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+  }
+  @media (max-width: 800px) {
+    .categories-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .categories-list .full-width {
+      grid-column: 1/3;
+    }
+  }
+  
+  @media (max-width: 540px) {
+    .categories-list {
+      grid-template-columns: 1fr;
+    }
+    .categories-list .full-width {
+      grid-column: 1/2;
+    }
+    .categories-list .category-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 1px 2px 10px 10px white;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  .inactive {
+    opacity: 0;
+  }
+
+  div.slideshow-container {
+    border: 2px solid black;
+    border-radius: 5px;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  body{
+    margin: 0;
+  }
+
+

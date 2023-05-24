@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .top-bar{
+            width: 80%;
+            height: 4rem;
+            background-color: #eee;
+            margin-bottom: 20px;
+            display: flex;
+            padding: 0px 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .fa-solid{
+            color: rgb(62, 16, 16);
+            margin-right: 10px;
+        }
+        .header{
+            width: 80%;
+            height: 200px;
+            background-image: url(pexels-alex-knight-2599245.jpg);
+            background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 190px;
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar p{
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar ul{
+            display: flex;
+            list-style: none;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            font-size: 24px;
+            color: white;
+            padding: 7px 15px;
+        }
+        .navbar ul li a:hover{
+            background-color: white;
+            color: rgb(34, 25, 25);
+            border-radius: 3px;
+        }
+        .navbar-b{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dropdown{
+            width: 130px;
+            text-align: center;
+            background-color: white;
+            border-radius: 3px;
+        }
+        select{
+            outline: none;
+            border: none;
+            background: none;
+            padding: 7px 10px 7px 0px;
+            color: rgb(70, 19, 19);
+            font-size: 18px;
+            cursor: pointer;
+        }
+        select:hover{
+            color: #333;
+        }
+        .search{
+            width: 500px;
+            background-color: white;
+            height: 45px;
+            border-radius: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .search input{
+            width: 440px;
+            border: none;
+            outline: none;
+            height: 40px;
+        }
+        .cart{
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 3px;
+            width: 80px;
+            font-size: 28px;
+            
+        }
+        .cart p{
+            height: 42px;
+            width: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            background-color: rgb(66, 23, 23);
+            color: white;
+        }
+        .container{
+            width: 80%;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        #root{
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) ;
+            grid-gap: 40px;
+        }
+        
+        .box{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            
+        }
+        .img-box{
+            width: 60%;
+            height: 370px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .left{
+            width: 50%;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 90px;
+           
+            
+        }
+        img{
+            max-height: 150%;
+            max-width: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(240, 209, 214);
+            padding: 10px 25px;
+            cursor: pointer;
+            color: white;
+            
+        }
+        button:hover{
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <dic class="top-bar">
+        <p><i class="fa-solid fa-envelope"></i>winemart@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+0911887766</p>
+    </dic>
+    <div class="header">
+        <div class="navbar">
+            <p>LOGO</p>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-b">
+            <div class="dropdown">
+                <select name="">
+                    <option value="1">Categories</option>
+                    <option value="2">New</option>
+                    <option value="3">Imported</option>
+                    <option value="4">Local</option>
+                </select>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <dic class="cart"><i class="fa-solid fa-cart-shopping"></i><p>0</p></dic>
+        </div>
+    </div>
+    <div class="container">
+        <div id="root"></div>
+        
+    <script>
+        const product = [
+            {
+                id: 1,
+                image: 'beer/corona.jpg',
+                title: 'CORONA',
+                price: '65'
+            },
+            {
+                id: 2,
+                image: 'beer/carlsberg.jpg',
+                title: 'CARLSBERG',
+                price: '85'
+            },
+            {
+                id: 3,
+                image: 'beer/heinken.jpg',
+                title: 'HEINKEN',
+                price: '95'
+            },
+            {
+                id: 4,
+                image: 'beer/budweiser.jpg',
+                title: 'BUDWEISER',
+                price: '80'
+            },
+            
+        ]
+        const categories = [...new Set(product.map((item)=>
+       {return item}))]
+
+       let img = document.getElementById('root')
+       img.innerHTML = categories.map((item)=>
+       {
+        var {image, title, price} = item;
+           return(
+           `<div class="box">
+                <div class="img-box">
+                    <img src=${image}></img>
+                </div>
+                <div class="left">
+                    <p>${title}</p>
+                    <h2>${price}</h2>
+                    <button><a href="payment.html">Add To Cart</a>
+                    </button>
+                </div>
+            </div>`)
+       }).join('')
+       </script>
+</body>
+</html>
